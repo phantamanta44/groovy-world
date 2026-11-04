@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "${modId}",
+    "name": "Groovy World",
+    "description": "A world feature generator toolkit for GroovyScript.",
+    "version": "${modVersion}",
+    "mcversion": "${mcVersion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["phantamanta44"],
+    "logoFile": "assets/groovyworld/logo.png",
+    "screenshots": [],
+    "useDependencyInformation": true,
+    "dependencies": [],
+    "requiredMods": ["groovyscript"]
+  }
+]
