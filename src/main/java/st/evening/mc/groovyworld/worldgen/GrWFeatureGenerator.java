@@ -26,6 +26,9 @@ public class GrWFeatureGenerator implements IWorldGenerator {
                          final IChunkGenerator chunkGenerator, final IChunkProvider chunkProvider) {
         final Set<Map.Entry<String, GrWFeature>> features = registry.getFeatures(slot);
         if (features.isEmpty()) return;
+        // need to vary the seed based on the slot or features with similar distributions in different slots may end up
+        // generating in the same spot
+        random.setSeed(random.nextLong() ^ slot.seedModifier);
         final int minX = (chunkX << 4) + 8, minZ = (chunkZ << 4) + 8;
         for (final Map.Entry<String, GrWFeature> entry : features) {
             try {
